@@ -348,4 +348,17 @@ public class BasePage {
     }
     // endregion
 
+    protected boolean checkElementPresent(WebElement element) {
+        try {
+            return element.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+
+    }
+
+    protected void enterAndHitEnterKeyword(WebElement element, String keyword) {
+        element.sendKeys(keyword);
+        element.sendKeys(Keys.ENTER);
+    }
 }
