@@ -8,5 +8,10 @@
 
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://verizon.com"/>
+    <test name ="BAT">
+    <classes>
+        <class name="TestVerizonApp"/>
+    </classes>
+   </test>
 
 </suite>
