@@ -9,4 +9,13 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="https://freecrm.com"/>
 
+    <test name="BAT">
+        <classes>
+            <class name="TestLogin"/>
+            <class name="TestCreateContact"/>
+            <class name="Testsql"/>
+            <class name="TestCreateTasks"/>
+        </classes>
+    </test>
 </suite>
+
