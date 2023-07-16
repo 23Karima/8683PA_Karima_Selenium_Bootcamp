@@ -8,5 +8,18 @@
 
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://bankofamerica.com"/>
+    <test name="smoke">
+        <!--        <groups>-->
+        <!--            <run>-->
+        <!--                <include name=""/>-->
+        <!--            </run>-->
+        <!--        </groups>-->
+        <classes>
+            <class name="TestAtmLocatorPage"/>
+            <class name="TestBOAbutton"/>
+            <class name="TestLanguage"/>
+            <class name="Teststatictable"/>
 
+        </classes>
+    </test>
 </suite>
