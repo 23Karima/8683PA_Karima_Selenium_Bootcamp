@@ -11,7 +11,7 @@
 
     <test name="BAT">
         <classes>
-            <class name="TestLogin"/>
+            <class name="testFilterthersult"/>
             <class name="TestCreateContact"/>
             <class name="Testsql"/>
             <class name="TestCreateTasks"/>
