@@ -1,17 +1,13 @@
-package luma.pom;
-
+package luma.pom.checkoutpage;
 import base.BasePage;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-    public class CheckOutPage extends BasePage {
+    public class CheckoutPage extends BasePage {
 
-        public CheckOutPage(){
-            PageFactory.initElements(driver,this);
-        }
-
+        // Web Elements
         @FindBy(id="top-cart-btn-checkout")
         public WebElement checkOutButton;
 
@@ -28,7 +24,7 @@ import org.openqa.selenium.support.PageFactory;
         public WebElement stateProvinceDropdown;
 
         @FindBy(xpath = "//input[@id='HPF3581']")
-        public WebElement zipInput;
+        public WebElement inputZipField;
 
         @FindBy(xpath = "//select[@id='PKXG6NA']")
         public WebElement countryDropdown;
@@ -36,30 +32,46 @@ import org.openqa.selenium.support.PageFactory;
         @FindBy(xpath = "//input[@id='RR4GA7V']")
         public WebElement phoneNumberInput;
 
-        @FindBy(xpath = "//*[@id='checkout-shipping-method-load']/table/tbody/tr[1]/td[1]/input")
+        @FindBy(xpath = "//[@id='checkout-shipping-method-load']/table/tbody/tr[1]/td[1]/input")
         public WebElement shippingMethodButton;
 
-        @FindBy(xpath = "//*[@id='shipping-method-buttons-container']/div/button")
+        @FindBy(xpath = "//[@id='shipping-method-buttons-container']/div/button")
         public WebElement nextButton;
 
+        public CheckoutPage(){
+            PageFactory.initElements(driver,this);
+        }
+
+        // Click on the Checkout Button
         public void clickOnCheckoutButton(){
             safeClickOnElement(checkOutButton);
         }
+
+        // Input Company Name
         public void inputCompanyName(String companyName){
             sendKeysToElement(inputCompany, companyName);
         }
+
+        // Input Street Address
         public void setInputStreetAddress(String streetAddress){
             sendKeysToElement(inputStreetAddress, streetAddress);
         }
-        public void setInputCity(String nameOfCity){
-            sendKeysToElement(inputStreetAddress, nameOfCity);
+
+        // Input City Name
+        public void setInputCity(String cityName){
+            sendKeysToElement(inputCity, cityName);
         }
 
-        public void setStateProvinceDropdown(){
-            clickOnElement(stateProvinceDropdown);
+        // Click on State/Province Dropdown
+        public void clickStateProvinceDropdown(){
+            safeClickOnElement(stateProvinceDropdown);
         }
-        public void setZipInput(String zipCode ){
-            sendKeysToElement(zipInput, zipCode);
+
+        // Input Zip Field
+        public void setInputZipField(String zipCode){
+            sendKeysToElement(inputZipField, zipCode);
         }
+
+        //  Methods for other fields and actions i can added here if i need it .
 
     }

@@ -15,13 +15,13 @@
         <!--            </run>-->
         <!--            </groups>-->
         <classes>
-            <class name="TestNavigation"/>
-            <class name="TestLogin"/>
-            <class name="CreateAccountWithDataProvider"/>
+            <class name="testRegistration"/>
+            <class name="testFilterthersult"/>
+            <class name="test_app"/>
             <class name="TestSearchInvalidItem"/>
-            <class name="SearchItemWithDP"/>
-            <class name="TestCategoryResult"/>
-            <class name="TestSearchInvalidResult"/>
+            <class name="testAuthentication"/>
+            <class name="testContactus"/>
+            <class name="TestShoppingCart"/>
 
         </classes>
     </test>
