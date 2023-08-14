@@ -9,4 +9,21 @@
     <parameter name="browser" value="chrome"/>
     <parameter name="url" value="http://espn.com"/>
 
+    <test name="smoke">
+        <!--        <groups>-->
+        <!--            <run>-->
+        <!--                <include name=""/>-->
+        <!--            </run>-->
+        <!--        </groups>-->
+        <classes>
+            <!--        <classes>-->
+            <class name="TestAuthentication"/>
+            <class name="TestSearch"/>
+            <class name="TestVedioPLayback"/>
+            <class name="TestArticleOnFacebook"/>
+
+        </classes>
+    </test>
+
 </suite>
+
